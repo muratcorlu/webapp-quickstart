@@ -5,10 +5,11 @@ Quickstart template for my webapp projects running with AngularJS 1.X (ES6), Web
 ## Setup
 
 ```
-git clone https://github.com/muratcorlu/webapp-quickstart.git
-cd webapp-quickstart
+git clone https://github.com/muratcorlu/webapp-quickstart.git myappname
+cd myappname
+rm -rf .git
+APPNAME=myappname npm run setup
 npm install
-npm run setup -- --APPNAME=myappname
 npm start
 ```
 

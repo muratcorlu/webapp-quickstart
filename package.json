@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "setup": "find . -type f -exec sed -i 's/myapp/$APPNAME/g' {} +;find . -depth -name '* *' -execdir bash -c 'mv \"$1\" \"${1//myapp/$APPNAME}\"' _ {}",
+    "setup": "find . -type f -exec sed -e -i 's/myapp/$APPNAME/g' {} +; find . -depth -name '* *' -execdir bash -c 'mv \"$1\" \"${1//myapp/$APPNAME}\"' _ {} +",
     "start": "webpack-dev-server",
     "build": "rm -rf build; NODE_ENV=production PROD=1 webpack -p --config webpack.config.js"
   },
